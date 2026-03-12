@@ -23,7 +23,7 @@ cantidadPerroCaliente = 0
 
 while opcion != 6:
     opcion = int(input("Ingrese una opcion del Menu: "))
-    if opcion ==1:
+    if opcion == 1:
         totalHamburguesa += 20000
         cantidadHamburguesa += 1
         print("Has Elegido Hamburguesa")
