@@ -98,9 +98,19 @@ def pagoHoras():
     try:
         while True:
             pagoHoras = float(input("Ingrese el pago por hora"))
+            if pagoHoras > 0:
+                return pagoHoras
+            else:
+                print("Por Favor Ingrese la cantidad de horas correctas")
+
+    except ValueError:
+        print("Por Favor Ingrese unDato Valido")
         
+
 def regEmpleado():
     nombre = input("Por favor Ingrese el nombre del empleado: ")
     edad = pedirEdad()
+    salarioBruto = horasTrabajadas() * pagoHoras()
+    
 
 

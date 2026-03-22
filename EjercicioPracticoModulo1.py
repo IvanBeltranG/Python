@@ -184,14 +184,17 @@ def inicio():
             if estudiantesRegistrados > 0:
                 promedio_general = sumaPromedio / estudiantesRegistrados
                 print(f"Promedio general del grupo: {promedio_general:.2f}")
-                
+
+                print("\n===== LISTADO DE ESTUDIANTES =====")
+                i = 1
+                for estudiante in listaEstudiantes:
+                    print(f"- Registro No. {i} - Nombre: {estudiante[0]} - Promedio: {estudiante[5]:.2f} - Estado: {estudiante[6]}")
+                    i += 1
             else:
                 print("Promedio general del grupo: 0.00")
+                print("No hay estudiantes registrados.")
 
             print("Programa finalizado.")
             break
-
-        else:
-            print("Opción no válida. Intente nuevamente.")
 
 inicio()
