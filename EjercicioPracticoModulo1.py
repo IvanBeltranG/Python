@@ -192,9 +192,9 @@ def inicio():
                     i += 1
             else:
                 print("Promedio general del grupo: 0.00")
-                print("No hay estudiantes registrados.")
+                print("\nNo hay estudiantes registrados.")
 
-            print("Programa finalizado.")
+            print("Programa finalizado.\n")
             break
 
 inicio()
