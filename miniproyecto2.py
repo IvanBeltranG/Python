@@ -80,12 +80,13 @@ class CuentaBancaria:
     def retirar(self, monto):
         if monto <= 0:
             print("Error: El retiro debe ser mayor que 0.")
-        elif monto > self.__saldo:
+            return
+        if monto > self.__saldo:
             print("Error: Fondos insuficientes.")
-        else:
-            self.__saldo -= monto
-            self._historial.append(f"Retiro: -${monto}")
-            print("Retiro realizado con éxito.")
+            return
+        self.__saldo -= monto
+        self._historial.append(f"Retiro: -${monto}")
+        print("Retiro realizado con éxito.")
 
     # Ver saldo
     def ver_saldo(self):
